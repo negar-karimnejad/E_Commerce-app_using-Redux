@@ -33,7 +33,7 @@ function Navbar() {
                 className="cursor-pointer text-gray-500 text-2xl relative"
               >
                 <FiShoppingCart />
-                <div className="absolute -top-3 -right-3 bg-emerald-500 text-white text-sm rounded-full w-5 h-5 flex items-center justify-center">
+                <div className="absolute -top-3 -right-2 bg-emerald-500 text-white text-sm rounded-full w-5 h-5 flex items-center justify-center">
                   {count}
                 </div>
               </div>

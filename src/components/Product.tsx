@@ -33,7 +33,7 @@ function Product(product: ProductProps) {
             </p>
             <p className="text-gray-500 text-sm">({views} Review)</p>
           </div>
-          <p className="text-sky-500 font-bold text-lg">
+          <p className="text-emerald-800 font-bold text-lg">
             {formatCurrency(price)}
           </p>
         </div>

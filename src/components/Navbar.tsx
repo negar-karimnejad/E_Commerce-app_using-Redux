@@ -14,10 +14,12 @@ function Navbar() {
       <nav className="bg-white pt-4 sticky top-0 z-50 max-w-full shadow">
         <div className="container mx-auto px-[15px]">
           <div className="flex items-center justify-between">
-            <h1 className="font-bold text-4xl cursor-pointer">Shopping</h1>
+            <h1 className="font-bold text-4xl text-emerald-500 cursor-pointer">
+              Shopping
+            </h1>
             <div className="flex items-center gap-4 md:gap-8">
               <div className="md:flex hidden items-center gap-3">
-                <div className="flex items-center rounded-full border-2 text-gray-500 text-2xl justify-center cursor-pointer hover:bg-gray-200 transition-all duration-200 border-gray-300 w-10 h-10">
+                <div className="flex items-center rounded-full border-2 text-gray-500 text-2xl justify-center cursor-pointer hover:bg-gray-200 transition-all duration-200 border-emerald-500 w-10 h-10">
                   <AiOutlineUser />
                 </div>
                 <div>
@@ -31,7 +33,7 @@ function Navbar() {
                 className="cursor-pointer text-gray-500 text-2xl relative"
               >
                 <FiShoppingCart />
-                <div className="absolute -top-3 -right-3 bg-red-500 text-white text-sm rounded-full w-5 h-5 flex items-center justify-center">
+                <div className="absolute -top-3 -right-3 bg-emerald-500 text-white text-sm rounded-full w-5 h-5 flex items-center justify-center">
                   {count}
                 </div>
               </div>

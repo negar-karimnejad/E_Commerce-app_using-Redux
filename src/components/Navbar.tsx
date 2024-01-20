@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="bg-white pt-4 sticky top-0 z-50 max-w-full shadow">
+      <nav className="bg-white pt-4 sticky top-0 z-50 max-w-full shadow">
         <div className="container mx-auto px-[15px]">
           <div className="flex items-center justify-between">
             <h1 className="font-bold text-4xl cursor-pointer">Shopping</h1>
@@ -39,7 +39,7 @@ function Navbar() {
           </div>
         </div>
         <div className="border-b border-gray-200 pt-4"></div>
-      </div>
+      </nav>
       <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} />
     </>
   );

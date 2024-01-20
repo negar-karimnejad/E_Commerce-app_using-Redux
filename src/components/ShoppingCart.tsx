@@ -1,8 +1,8 @@
 import { CgClose } from "react-icons/cg";
+import { TbShoppingCartOff } from "react-icons/tb";
 import Button from "../components/Button";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { deleteFromCart } from "../redux/slice/cartSlice";
-import { TbShoppingCartOff } from "react-icons/tb";
 import formatCurrency from "../utilities/formatCurrency";
 
 type ShoppingCartProps = {
@@ -38,7 +38,7 @@ function ShoppingCart({ openCart, setOpenCart }: ShoppingCartProps) {
             </div>
           </div>
 
-          <div className="mt-5 max-h-80 overflow-y-auto px-5">
+          <main className="mt-5 max-h-80 overflow-y-auto px-5">
             {products.length > 0 ? (
               products.map((product) => (
                 <div
@@ -69,7 +69,7 @@ function ShoppingCart({ openCart, setOpenCart }: ShoppingCartProps) {
                 </div>
               </div>
             )}
-          </div>
+          </main>
           {products.length > 0 && (
             <>
               <div className="px-5 flex font-bold text-lg items-center justify-between my-8">

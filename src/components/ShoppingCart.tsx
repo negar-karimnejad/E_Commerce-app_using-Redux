@@ -1,3 +1,4 @@
+import { Notyf } from "notyf";
 import { CgClose } from "react-icons/cg";
 import { TbShoppingCartOff } from "react-icons/tb";
 import Button from "../components/Button";
@@ -14,6 +15,18 @@ function ShoppingCart({ openCart, setOpenCart }: ShoppingCartProps) {
   const products = useAppSelector((store) => store.cart);
   const dispatch = useAppDispatch();
 
+  const removeHandler = (id: number) => {
+    dispatch(deleteFromCart(id));
+    const notyf = new Notyf({
+      duration: 1000,
+
+      position: {
+        x: "center",
+        y: "top",
+      },
+    });
+    notyf.error("Removed From Cart!");
+  };
   return (
     <>
       <div
@@ -54,7 +67,7 @@ function ShoppingCart({ openCart, setOpenCart }: ShoppingCartProps) {
                       {product.quantity} x {formatCurrency(product.price)}
                     </p>
                   </div>
-                  <button onClick={() => dispatch(deleteFromCart(product.id))}>
+                  <button onClick={() => removeHandler(product.id)}>
                     <CgClose />
                   </button>
                 </div>

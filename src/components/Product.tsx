@@ -1,3 +1,5 @@
+import { Notyf } from "notyf";
+import "notyf/notyf.min.css";
 import { BsStar, BsStarFill } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import { useAppDispatch } from "../redux/hooks";
@@ -9,6 +11,19 @@ import Button from "./Button";
 function Product(product: ProductProps) {
   const { title, category, price, rating, views, image } = product;
   const dispatch = useAppDispatch();
+
+  const addHandler = () => {
+    dispatch(addToCart(product));
+    const notyf = new Notyf({
+      duration: 1000,
+
+      position: {
+        x: "center",
+        y: "top",
+      },
+    });
+    notyf.success("Added To Cart.");
+  };
 
   return (
     <div className="border p-3 flex flex-col items-center gap-3 shadow-lg">
@@ -38,7 +53,7 @@ function Product(product: ProductProps) {
           </p>
         </div>
       </div>
-      <Button onClick={() => dispatch(addToCart(product))}>
+      <Button onClick={addHandler}>
         <FiShoppingCart />
         Add To Cart
       </Button>

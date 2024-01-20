@@ -11,12 +11,12 @@ function Product(product: ProductProps) {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="border p-3 flex flex-col items-center gap-2 shadow-lg">
+    <div className="border p-3 flex flex-col items-center gap-3 shadow-lg">
       <div className="max-w-56 h-64 transition-all cursor-pointer hover:scale-105">
         <img className="" src={image} alt={title} />
       </div>
       <div className="border-t w-full mb-2 border-gray-100"></div>
-      <div className="flex flex-col items-end gap-2">
+      <div className="flex flex-col items-end gap-2 mb-2">
         <div className="flex gap-10 ">
           <p className="text-gray-500">{category}</p>
           <p className="font-bold text-lg">{title}</p>
